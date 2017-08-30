@@ -2,6 +2,7 @@
   <div class="container">
     <a href="/" class="navbar-brand">Record<span class="light">Store</span></a>
     <ul class="nav pull-sm-right">
+
       <li class="nav-item">
         <%= link_to 'Products', store_index_path, class: "nav-link" %>
       </li>
@@ -14,6 +15,20 @@
       <li class="nav-item">
         <%= link_to 'Your Cart', carts_path, class: "nav-link" %>
       </li>
+
+    <% if session[:user_id] %>
+      <li class="nav-item">
+        <%= link_to 'Orders', orders_path, class: "nav-link" %>
+      </li>
+      <!-- <li class="nav-item">
+        <%= link_to 'Products', products_path, class: "nav-link" %>
+      </li> -->
+      <li class="nav-item">
+        <%= link_to 'Admins', users_path, class: "nav-link" %>
+      </li>
+      <%= button_to 'Logout', logout_path, method: :delete, class: 'btn' %>
+
+    <% end %>
     </ul>
   </div>
 </nav>
