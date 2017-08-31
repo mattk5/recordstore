@@ -1,8 +1,19 @@
 .footer {
-  background-color: #e6e6e6;
+  background-color: #EBEBD3;
   padding: 30px;
   margin-top: 100px;
+  height: 200px;
+  font-size: 18px;
   // position: fixed;
   // bottom: 0;
   // width: 100%;
+}
+
+ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.left_foot {
+  padding-left: 30px;
 }
