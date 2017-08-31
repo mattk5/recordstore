@@ -1,4 +1,4 @@
-<div>
+<div class="new_user">
   <%= form_for(user) do |f| %>
     <% if user.errors.any? %>
       <div id="error_explanation">
@@ -28,7 +28,7 @@
         <%= f.password_field :password_confirmation %>
       </div>
 
-      <div class="actions">
+      <div class="actions field_button">
         <%= f.submit 'Create User', class: "btn btn-primary"%>
       </div>
     </fieldset>
