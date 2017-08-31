@@ -1,9 +1,15 @@
 <p id="notice"><%= notice %></p>
-<div class="row">
-  <h1 class="col col-md-10">Records</h1>
-  <span class="listing col col-md-2"><%= link_to 'New Listing', new_product_path %></span>
-</div>
-
-<div class="row">
-  <%= render @products %>
+<div class="main_listing">
+  <div class="row">
+    <h1 class="col col-md-10">Records</h1>
+    <% if session[:user_id] %>
+      <span class="listing col col-md-2"><%= link_to 'New Listing', new_product_path %></span>
+    <% else %>
+      <span class="listing col col-md-2"><%= link_to 'Create New Account', new_user_path %></span>
+    <% end %>
+  </div>
+  <div class="row">
+    <%= render @products %>
+  </div>
+  <%= render 'layouts/footer' %>
 </div>
